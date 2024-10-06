@@ -1,0 +1,46 @@
+package perulangan;
+import java.util.Scanner;
+public class kasir1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int pilih=0, jumlah, total=0, grandTotal=0;
+        do{
+            System.out.println("\nAplikasi kKasir");
+            System.out.println("1.Tas\n2.Sandal\n3.Sepatu");
+            System.out.println("4.Selesai");
+            System.out.print("Pilih = ");
+            pilih=sc.nextInt();
+            switch(pilih){
+                case 1:
+                    System.out.println("Tas [Rp.100.000]");
+                    System.out.print("Jumlah = ");
+                    jumlah=sc.nextInt();
+                    total=100000*jumlah;
+                    System.out.println("Total = "+total);
+                    grandTotal=grandTotal+total;
+                    break;
+                case 2:
+                    System.out.println("Sandal [Rp.150.000]");
+                    System.out.print("Jumlah = ");
+                    jumlah=sc.nextInt();
+                    total=150000*jumlah;
+                    System.out.println("Total = "+total);
+                    grandTotal=grandTotal+total;
+                    break;
+                case 3:
+                    System.out.println("Sepatu [Rp.200.000]");
+                    System.out.print("Jumlah = ");
+                    jumlah=sc.nextInt();
+                    total=200000*jumlah;
+                    System.out.println("Total = "+total);
+                    grandTotal=grandTotal+total;
+                    break;
+                case 4:
+                    System.out.println("Terima Kasih...");
+                    break;
+                default: System.out.println("Pilihan Zonk!");
+            }
+        }while(pilih!=4);
+        System.out.println("Grand Total = "+grandTotal);
+    }
+}
